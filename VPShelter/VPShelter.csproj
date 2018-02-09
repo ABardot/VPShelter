@@ -44,10 +44,11 @@
   <ItemGroup>
     <Compile Include="Employee.cs" />
     <Compile Include="Manager.cs" />
+    <Compile Include="Pets.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VirtualPets.cs" />
-    <Compile Include="VirtualShelter.cs" />
+    <Compile Include="VirtualPetShelter.cs" />
     <Compile Include="Volunteer.cs" />
   </ItemGroup>
   <ItemGroup>

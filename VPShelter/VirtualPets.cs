@@ -1,25 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace VPShelter
-{
-    class VirtualPets
+﻿namespace VPShelter
+{   // Base
+    public class VirtualPets
     {
         // Fields
-        //private string 
+        // Properties
+        private bool IsHunger { get; set; }
+        private bool IsThirsty { get; set; }
+        private bool IsBored { get; set; }
+       
+        // Constructors
+        public VirtualPets()
+        {
+            //default
+        }
 
+       
 
+        public VirtualPets(bool isHungry, bool isThirsty, bool isBored)
+        {
+            IsHunger = isHungry;
+            IsThirsty = isThirsty;
+            IsBored = isBored;
+        }
 
+       
 
-
-
-
-
-
-
-
+        
     }
 }
