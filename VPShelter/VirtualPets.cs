@@ -1,30 +1,36 @@
-﻿namespace VPShelter
+﻿using System;
+namespace VPShelter
 {   // Base
-    public class VirtualPets
+    // Base Class
+    class VirtualPet
     {
-        // Fields
-        // Properties
-        private bool IsHunger { get; set; }
-        private bool IsThirsty { get; set; }
-        private bool IsBored { get; set; }
-       
-        // Constructors
-        public VirtualPets()
+
+        public string PetName { get; set; }
+        public bool Thirst { get; set; }
+        public bool Hunger { get; set; }
+        public bool Bored { get; set; }
+
+
+
+        public VirtualPet()
         {
-            //default
+            // Default
         }
 
-       
-
-        public VirtualPets(bool isHungry, bool isThirsty, bool isBored)
+        public VirtualPet(string petName)
         {
-            IsHunger = isHungry;
-            IsThirsty = isThirsty;
-            IsBored = isBored;
+            PetName = petName;
+
         }
 
-       
+        public VirtualPet(bool thirst, bool hunger, bool bored)
+        {
+            Thirst = thirst;
+            Hunger = hunger;
+            Bored = bored;
+        }
 
-        
+
+
     }
 }
