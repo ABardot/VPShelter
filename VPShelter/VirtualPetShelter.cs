@@ -5,47 +5,38 @@ namespace VPShelter
     public class VirtualPetShelter
     {   //Prop
         
-        public string EmployeeList { get; set; }
-        public List Pets { get; set; }
+        public List<Employee> EmployeeList { get; set; }
+        public List<Pet> Pets { get; set; }
         
         //Constructors
         public VirtualPetShelter()
         {
-            //Default
+            Manager manager = new Manager(9);
+            Volunteer volunteer = new Volunteer(3);
+            EmployeeList = new List<Employee>();
+            EmployeeList.Add(volunteer);
+            EmployeeList.Add(manager);
+            Pets = new List<Pet>(); // Created as new List of pet
+            Pet petOne = new Pet("Bolt", "BB");
+            Pet petTwo = new Pet("Nuts", "RD");
+            Pet petThree = new Pet("Washer", "CP");
+            Pets.Add(petOne);
+            Pets.Add(petTwo);
+            Pets.Add(petThree);
+
         }
 
-        public VirtualPetShelter(string cage, string employeeList)
-        {
-            this.Cage = cage;
-            this.EmployeeList = employeeList;
-        }
+        
+        
     }
 }
 
-//List<string> pets = new List<string>();
-//private Pets dog = new Pets();
-//private Pets cat = new Pets();
-//private Pets rabbit = new Pets();
-
-//private List<Pets> allPets = new List<Pets>
-//{
-//    new Pets(){ Cat = "Sylvester", CatChow = "Tuna"},
-//    new Pets(){ Dog = "Spike", DogChow = "Steak"},
-//    new Pets(){ Rabbit = "Sasha", RabbitChow = "Carrots" }
-//};
 
 
 
 
 
 
-//        //Method
-//        public void ViewPetList()
-//        {
-//            foreach (object Pets in allPets)
-//            {
-//                System.Console.WriteLine(Pets);
-//            }
-//        }
-//    }
-//}
+
+
+     

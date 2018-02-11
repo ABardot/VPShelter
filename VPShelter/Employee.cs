@@ -1,31 +1,17 @@
-﻿using System;
-
-namespace VPShelter
+﻿namespace VPShelter
 {
     public abstract class Employee // Base
     {
-        //public string Volunteer { get; set; }
-        //public string Manager { get; set; }
+        public int EmployeeId { get; set; }
 
-        public Employee()
+        public Employee(int id)
         {
-            // Default
+            EmployeeId = id;
         }
-
-        public Employee(string volunteer, string manager)
-        {
-            Volunteer = volunteer;
-            Manager = manager;
-        }
-
+        // My 2 abstract method
+        public abstract void FixBattery(Pet pet);
        
+        public abstract void FixHydraulicPressure(Pet pet); 
 
-        // 2 Abstract Methods
-
-        public abstract void AdoptPet(); // Virtual  Only Manager
-
-        public abstract void BillPay(); // Virtual set as VOID!!!!!!!!!!!!!!!!!!!!!!!!!! Only Manager
-
-        
     }
 }

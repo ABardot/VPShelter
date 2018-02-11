@@ -1,54 +1,31 @@
-﻿namespace VPShelter
+﻿using System;
+namespace VPShelter
 {
     public class Manager : Employee
     {
-        public string Feed { get; set; }
-        public string Thirst { get; set; }
-        public string Exit { get; set; }
-        public string Adopt { get; set; }
-        public string PayBills { get; set; }
-       
+        public int CheckBookAmount { get; set; }
 
-        public Manager()
+        public Manager(int checkBook) : base(5)
         {
-            // default
+            CheckBookAmount = checkBook;
         }
 
-        public Manager(string feed, string thirst, string adopt, string paybills, string exit)
+        public override void FixBattery(Pet pet)
         {
-            Feed = feed;
-            Thirst = thirst;
-            Adopt = adopt;
-            PayBills = paybills;
-            Exit = exit;
-            
+            throw new System.NotImplementedException();
         }
 
-        public void FeedPet()
+
+        public override void FixHydraulicPressure(Pet pet)
         {
-            System.Console.WriteLine("The pet has been feed");
+            pet.FixHydraulicPressure();
+            Console.WriteLine("The {0} has a hydraulic pressure level of {1}", pet.DroidType, pet.HydrolicPressure );
         }
 
-        public void DrinkPet()
+        public void AdoptDroid(Pet pet)
         {
-            System.Console.WriteLine("The pet is not thirsty");
+            Console.WriteLine("The {0} was adopted.", pet.DroidType);
         }
 
-        public void ExitOut()
-        {
-            System.Console.WriteLine("Thank you for visiting the Cleveland Pet Shelter");
-        }
-
-        public override void AdoptPet()
-        {
-            System.Console.WriteLine("The Pets has been adopted");
-        }
-
-        public override void BillPay()
-        {
-            System.Console.WriteLine("The Bills have been paid");
-        }
-
-       
     }
 }

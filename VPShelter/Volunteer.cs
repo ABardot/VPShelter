@@ -1,53 +1,42 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace VPShelter
 {
     public class Volunteer : Employee
     {
-        public string Feed { get; set; }
-        public string Thirst { get; set; }
-        public string Play { get; set; }
-        public string HugPet { get; set; }
-        public string Exit { get; set; }
+        public int VolunteerBadgeID { get; set; }
 
-        public Volunteer()
+        public Volunteer(int id) : base(id)
         {
-            // default
+            VolunteerBadgeID = id;
         }
 
-        public Volunteer(string feed, string thirst, string play, string hugPet, string exit)
+        public override void FixBattery(Pet pet)
         {
-            Feed = feed;
-            Thirst = thirst;
-            Play = play;
-            HugPet = hugPet;
-            Exit = exit;
+            pet.FixBattery();
+            Console.WriteLine("The {0} has a battery level of {1}", pet.DroidType, pet.BatteryLevel);
         }
 
-        public void FeedPet()
+        public override void FixHydraulicPressure(Pet pet)
         {
-           Console.WriteLine("The pet has been feed");
+            throw new NotImplementedException(); 
         }
 
-        public void DrinkPet()
+        public void GiveOil(List<Pet> pets)
         {
-            Console.WriteLine("The pet is not thirsty");
+            foreach (var pet in pets)
+            {
+                Console.WriteLine("The {0} was given oil", pet.DroidType);
+            }
         }
 
-        public void ExitOut()
+        public void GiveFood(List<Pet>pets)
         {
-            Console.WriteLine("Thank you for visiting the Cleveland Pet Shelter");
+            foreach (var pet in pets)
+            {
+                Console.WriteLine("The {0} has been given {1}.", pet.DroidType, pet.FoodType ); 
+            }
         }
-
-        public void PlayPet()
-        {
-            Console.WriteLine("The pet is tired from playing");
-        }
-
-       public void PetHug()
-        {
-            Console.WriteLine("The pet is loved");
-        }
-
-        
     }
 }

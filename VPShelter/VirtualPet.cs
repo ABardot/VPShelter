@@ -8,7 +8,6 @@ namespace VPShelter
         
         private int batteryLevel;
         private int hydraulicPressure;
-        
         private bool batteryFixed;
         private bool hydraulicPressureFixed;
         
