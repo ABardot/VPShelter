@@ -6,12 +6,35 @@ namespace VPShelter
     {
         private static void Main(string[] args)
         {
-            //int employeeType = 0;
+            int userChoice = 0;
+            VirtualPetShelter virtualPet = new VirtualPetShelter();
 
-            //Console.WriteLine("Welcome to the Cleveland Pet Shelter. What Employee type are you?");
+            do
+            {
+                Employee userEmployee;
 
-            //Console.WriteLine("1) Manager \n2) Volunteer");
-            //employeeType = int.Parse(Console.ReadLine());
+                Console.WriteLine("Hello Welcome to the AstroMech Droid Shelter!");
+                Console.WriteLine("1) Manager \n2) Volunteer");
+                userChoice = int.Parse(Console.ReadLine());
+                if (userChoice == 1)
+                {
+                    userEmployee = virtualPet.Manager;
+                    
+                }
+                else
+                {
+                    userEmployee = virtualPet.Volunteer;
+                }
+
+
+
+
+
+
+
+
+
+            } while (userChoice != 6);
         }
     }
 }
