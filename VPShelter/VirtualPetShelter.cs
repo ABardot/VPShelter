@@ -4,10 +4,10 @@ namespace VPShelter
 {
     public class VirtualPetShelter
     {   //Prop
-        public string Cage { get; set; }
+        
         public string EmployeeList { get; set; }
-        public string Pets { get; set; }
-        public string Employees { get; set; }
+        public List Pets { get; set; }
+        
         //Constructors
         public VirtualPetShelter()
         {

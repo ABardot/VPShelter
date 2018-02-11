@@ -1,22 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace VPShelter
 {
     public class Volunteer : Employee
     {
-        public int VolunteerPay { get; set; }
+        public string Feed { get; set; }
+        public string Thirst { get; set; }
+        public string Play { get; set; }
+        public string HugPet { get; set; }
+        public string Exit { get; set; }
 
         public Volunteer()
         {
             // default
-        }
-        public Volunteer(int volunteerPay)
-        {
-            VolunteerPay = volunteerPay;
         }
 
         public Volunteer(string feed, string thirst, string play, string hugPet, string exit)
@@ -28,37 +23,31 @@ namespace VPShelter
             Exit = exit;
         }
 
+        public void FeedPet()
+        {
+           Console.WriteLine("The pet has been feed");
+        }
 
+        public void DrinkPet()
+        {
+            Console.WriteLine("The pet is not thirsty");
+        }
 
-        // Method overide void Methods here
-        // Method feed CW
-        //public virtual void Feed()
-        //{
-        //    Console.WriteLine("I have been feed");
-        //}
-        //// Method for water CW
-        //public virtual void Water()
-        //{
-        //    Console.WriteLine("The pet has is not thirsty");
-        //}
+        public void ExitOut()
+        {
+            Console.WriteLine("Thank you for visiting the Cleveland Pet Shelter");
+        }
 
-        //// Method for play CW
-        //public virtual void Play()
-        //{
-        //    Console.WriteLine("The Pet is not bored");
-        //}
+        public void PlayPet()
+        {
+            Console.WriteLine("The pet is tired from playing");
+        }
 
-        //// Method for play CW
-        //public virtual void Hug()
-        //{
-        //    Console.WriteLine("The Pet is not bored");
-        //}
+       public void PetHug()
+        {
+            Console.WriteLine("The pet is loved");
+        }
 
-        //// Method for quit CW
-        //public virtual void Exit()
-        //{
-        //    Console.WriteLine("Thank you for your volunteer time at the shelter!");
-        //}
-
+        
     }
 }
