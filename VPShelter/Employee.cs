@@ -1,6 +1,6 @@
 ﻿namespace VPShelter
 {
-    public abstract class Employee // Base
+    public abstract class Employee // Base Abstract Method
     {
         public int EmployeeId { get; set; }
 

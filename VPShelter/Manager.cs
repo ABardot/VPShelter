@@ -5,10 +5,18 @@ namespace VPShelter
     {
         public int CheckBookAmount { get; set; }
 
+
+        //public Manager()
+        //{
+
+        //}
+
         public Manager(int checkBook) : base(5)
         {
             CheckBookAmount = checkBook;
         }
+
+
 
         public override void FixBattery(Pet pet)
         {
@@ -16,16 +24,16 @@ namespace VPShelter
         }
 
 
-        public override void FixHydraulicPressure(Pet pet)
+        public override void FixHydraulicPressure(Pet pet) //My override method
         {
             pet.FixHydraulicPressure();
-            Console.WriteLine("The {0} has a hydraulic pressure level of {1}", pet.DroidType, pet.HydrolicPressure );
+            Console.WriteLine("The {0} has a hydraulic pressure level of {1}", pet.DroidType, pet.HydraulicPressure );
         }
 
-        public void AdoptDroid(Pet pet)
-        {
-            Console.WriteLine("The {0} was adopted.", pet.DroidType);
-        }
+        //public virtual void AdoptDroid(Pet pet)
+        //{
+        //    Console.WriteLine("The {0} was adopted.", pet.DroidType, pet.a);
+        //}
 
     }
 }
