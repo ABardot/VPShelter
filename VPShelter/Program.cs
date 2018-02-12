@@ -18,9 +18,9 @@ namespace VPShelter
                 userChoice = int.Parse(Console.ReadLine());
 
                 List<Pet> pets = new List<Pet>();
-                Pet droidOne = new Pet("BB", "89", "50", "Bolt", 10, 89);
-                Pet droidTwo = new Pet("R2", "89", "50", "Nut", 45, 12);
-                Pet droidThree = new Pet("CP", "89", "50", "Screw", 18, 75);
+                Pet droidOne = new Pet("BB", "BB", "BB", "Bolt", 10, 89);
+                Pet droidTwo = new Pet("R2", "R2", "R2", "Nut", 45, 12);
+                Pet droidThree = new Pet("CP", "CP", "CP", "Screw", 18, 75);
                 pets.Add(droidOne);
                 pets.Add(droidTwo);
                 pets.Add(droidThree);
@@ -38,6 +38,7 @@ namespace VPShelter
 
         private static int DoManagerWork(List<Pet> pets)
         {
+            DisplayPetsStatus(pets);
             Console.WriteLine("What would you like to next?");
             Console.WriteLine("\n");
             Console.WriteLine("1) Add hydraulic fluid");
@@ -69,6 +70,7 @@ namespace VPShelter
 
         private static int DoVolunteerWork(List<Pet> pets)
         {
+            DisplayPetsStatus(pets);
             Console.WriteLine("What would you like to next?");
             Console.WriteLine("\n");
             Console.WriteLine("1) Add hydraulic fulid");
@@ -86,6 +88,7 @@ namespace VPShelter
                 case 2:
                     vol.GiveOil(pets);
                     break;
+
                 case 3:
                     vol.GiveFood(pets);
                     break;
@@ -96,13 +99,14 @@ namespace VPShelter
 
             return volunteerUser;
         }
+
+        private static void DisplayPetsStatus(List<Pet> pets)
+        {
+            foreach (var pet in pets)
+            {
+                Console.WriteLine("Name: {0} | Description: {1} | Type: {2} | Food type: {3} | Battery level: {4} | Hydraulic pressure: {5}", pet.DroidName, pet.DroidDescription, pet.DroidType, pet.FoodType, pet.BatteryLevel, pet.HydraulicPressure);
+            }
+        }
     }
 }
 
-//Console.WriteLine(" Status of the droid: ");
-//    Console.WriteLine("\n");
-//    Console.WriteLine(" Droid | Description | Hydraulic Level | Battery Level |  Food  ");
-//    Console.WriteLine(" ------|-------------|-----------------|---------------|--------");
-//    //Console.WriteLine("   {0}       {1}          {2}              {3}         {4}  ", vp.DroidOne, vp.DroidDescriptionOne, vp.HydrolicPressure, vp.BatteryLevel, vp.BatteryFixed);
-//    //Console.WriteLine("   {0}       {1}          {2}              {3}         {4}  ", vp.DroidTwo, vp.DroidDescriptionTwo, vp.HydrolicPressure, vp.BatteryLevel, vp.BatteryLevel);
-//    //Console.WriteLine("   {0}       {1}          {2}              {3}         {4}  ", vp.DroidThree, vp.DroidDescriptionOne, vp.HydrolicPressure, vp.BatteryLevel, vp.HydrolicPressure);

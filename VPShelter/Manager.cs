@@ -24,7 +24,7 @@ namespace VPShelter
 
         public virtual void AdoptDroid(Pet pet)
         {
-            //Console.WriteLine("The {0} was adopted.", pet.DroidType, pet.);
+            Console.WriteLine("The {0} was adopted.", pet.DroidType);
         }
 
         internal void FixHydraulicPressure()
@@ -37,9 +37,11 @@ namespace VPShelter
             Console.WriteLine("The bills have been paid!");
         }
 
-        public void AdoptDroid()
+        internal void AdoptDroid()
         {
             Console.WriteLine("You have adopted a droid");
         }
+
+        
     }
 }
