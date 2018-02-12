@@ -21,9 +21,9 @@ namespace VPShelter
             EmployeeList.Add(manager);
 
             Pets = new List<Pet>(); // Created as new List of pet
-            Pet petOne = new Pet("BB", "89", "50", "Bolt", 10, 89 );
-            Pet petTwo = new Pet("R2", "89", "50", "Bolt", 45, 12);
-            Pet petThree = new Pet("CP", "89", "50", "Bolt", 18, 75);
+            Pet petOne = new Pet("BB", "BB", "50", "Bolt", 10, 89 );
+            Pet petTwo = new Pet("R2", "R2", "50", "Bolt", 45, 12);
+            Pet petThree = new Pet("CP", "CP", "50", "Bolt", 18, 75);
             Pets.Add(petOne);
             Pets.Add(petTwo);
             Pets.Add(petThree);

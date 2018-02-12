@@ -20,7 +20,7 @@ namespace VPShelter
 
         public override void FixHydraulicPressure(Pet pet)
         {
-            Console.WriteLine("The droid feels better now!");
+            throw new NotImplementedException();
         }
 
         public void GiveOil(List<Pet> pets)
@@ -31,27 +31,12 @@ namespace VPShelter
             }
         }
 
-        public void GiveFood(List<Pet>pets)
+        public void GiveFood(List<Pet> pets)
         {
             foreach (var pet in pets)
             {
-                Console.WriteLine("The {0} has been given {1}.", pet.DroidType, pet.FoodType ); 
+                Console.WriteLine("The {0} has been given {1}.", pet.DroidType, pet.FoodType);
             }
-        }
-
-        internal void FixHydraulicPressure()
-        {
-            Console.WriteLine("Beep Beep the droid makes a sound");
-        }
-
-        internal void FixBattery()
-        {
-            Console.WriteLine("The droid is feeling a lot better");
-        }
-
-        internal void GiveFood()
-        {
-            Console.WriteLine("The droid was given oil and it is not thirsty");
         }
     }
 }

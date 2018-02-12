@@ -49,7 +49,7 @@ namespace VPShelter
             switch (managerUser)
             {
                 case 1:
-                    man.FixHydraulicPressure(pets[0]);
+                    man.FixHydraulicPressure(pets[1]);
 
                     break;
 
@@ -80,14 +80,14 @@ namespace VPShelter
             switch (volunteerUser)
             {
                 case 1:
-                    vol.FixHydraulicPressure();
+                    vol.FixBattery(pets[1]);
                     break;
 
                 case 2:
-                    vol.FixBattery();
+                    vol.GiveOil(pets);
                     break;
                 case 3:
-                    vol.GiveFood();
+                    vol.GiveFood(pets);
                     break;
 
                 default:
