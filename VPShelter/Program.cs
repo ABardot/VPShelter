@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace VPShelter
+namespace VPShelter // Adrien Bardot Project 4 WCCISpring2018
 {
     internal class Program
     {
@@ -51,7 +51,6 @@ namespace VPShelter
             {
                 case 1:
                     man.FixHydraulicPressure(pets[1]);
-
                     break;
 
                 case 2:
@@ -73,7 +72,7 @@ namespace VPShelter
             DisplayPetsStatus(pets);
             Console.WriteLine("What would you like to next?");
             Console.WriteLine("\n");
-            Console.WriteLine("1) Add hydraulic fulid");
+            Console.WriteLine("1) Add hydraulic fluid");
             Console.WriteLine("2) Give Oil");  // Hydro override methods
             Console.WriteLine("3) Give food"); // Battery override methods
             Console.WriteLine("4) Quit");
@@ -109,4 +108,3 @@ namespace VPShelter
         }
     }
 }
-

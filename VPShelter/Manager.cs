@@ -27,11 +27,6 @@ namespace VPShelter
             Console.WriteLine("The {0} was adopted.", pet.DroidType);
         }
 
-        internal void FixHydraulicPressure()
-        {
-            throw new NotImplementedException();
-        }
-
         public void PayBill()
         {
             Console.WriteLine("The bills have been paid!");
@@ -41,7 +36,5 @@ namespace VPShelter
         {
             Console.WriteLine("You have adopted a droid");
         }
-
-        
     }
 }
