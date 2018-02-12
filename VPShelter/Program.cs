@@ -9,7 +9,6 @@ namespace VPShelter
         {
             int userChoice = 0;
             VirtualPetShelter virtualPet = new VirtualPetShelter();
-           
 
             do
             {
@@ -39,7 +38,6 @@ namespace VPShelter
 
         private static int DoManagerWork(List<Pet> pets)
         {
-            
             Console.WriteLine("What would you like to next?");
             Console.WriteLine("\n");
             Console.WriteLine("1) Add hydraulic fluid");
@@ -47,12 +45,20 @@ namespace VPShelter
             Console.WriteLine("3) Adopt a Droid"); //Adopt set as override
             Console.WriteLine("4) Quit");
             int managerUser = int.Parse(Console.ReadLine());
+            Manager man = new Manager(150);
             switch (managerUser)
             {
                 case 1:
-                   
+                    man.FixHydraulicPressure(pets[0]);
+
                     break;
+
                 case 2:
+                    man.PayBill();
+                    break;
+
+                case 3:
+                    man.AdoptDroid();
                     break;
 
                 default:
@@ -70,10 +76,20 @@ namespace VPShelter
             Console.WriteLine("3) Give food"); // Battery override methods
             Console.WriteLine("4) Quit");
             int volunteerUser = int.Parse(Console.ReadLine());
+            Volunteer vol = new Volunteer(150);
             switch (volunteerUser)
             {
                 case 1:
+                    vol.FixHydraulicPressure();
                     break;
+
+                case 2:
+                    vol.FixBattery();
+                    break;
+                case 3:
+                    vol.GiveFood();
+                    break;
+
                 default:
                     break;
             }

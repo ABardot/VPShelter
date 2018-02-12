@@ -26,5 +26,20 @@ namespace VPShelter
         {
             //Console.WriteLine("The {0} was adopted.", pet.DroidType, pet.);
         }
+
+        internal void FixHydraulicPressure()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void PayBill()
+        {
+            Console.WriteLine("The bills have been paid!");
+        }
+
+        public void AdoptDroid()
+        {
+            Console.WriteLine("You have adopted a droid");
+        }
     }
 }
